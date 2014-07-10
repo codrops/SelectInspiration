@@ -38,6 +38,11 @@ div.cs-skin-elastic {
 	opacity: 1;
 	visibility: visible;
 	padding-bottom: 1.25em;
+	pointer-events: none;
+}
+
+.cs-skin-elastic.cs-active .cs-options {
+	pointer-events: auto;
 }
 
 .cs-skin-elastic .cs-options > ul::before {
