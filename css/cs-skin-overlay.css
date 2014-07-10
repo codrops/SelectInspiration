@@ -20,7 +20,7 @@ div.cs-skin-overlay {
 }
 
 @media screen and (max-width: 30em) {
-	.cs-skin-overlay { font-size: 1em; }
+	div.cs-skin-overlay { font-size: 1em; }
 }
 
 .cs-skin-overlay > span {

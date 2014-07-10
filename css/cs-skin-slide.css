@@ -15,6 +15,10 @@ div.cs-skin-slide {
 	width: 300px;
 }
 
+@media screen and (max-width: 30em) {
+	div.cs-skin-slide { font-size: 1em; width: 250px; }
+}
+
 div.cs-skin-slide::before {
 	content: '';
 	background: #282b30;
@@ -39,6 +43,10 @@ div.cs-skin-slide::before {
 	line-height: 32px;
 	-webkit-transition: text-indent 0.3s, opacity 0.3s;
 	transition: text-indent 0.3s, opacity 0.3s;
+}
+
+@media screen and (max-width: 30em) {
+	.cs-skin-slide > span { height: 60px; line-height: 28px; }
 }
 
 .cs-skin-slide.cs-active > span {
@@ -69,6 +77,10 @@ div.cs-skin-slide::before {
 	left: 50%;
 	-webkit-transform: translate3d(-50%,-50%,0);
 	transform: translate3d(-50%,-50%,0);
+}
+
+@media screen and (max-width: 30em) {
+	.cs-skin-slide .cs-options { padding-top: 3em; }
 }
 
 .cs-skin-slide .cs-options li {

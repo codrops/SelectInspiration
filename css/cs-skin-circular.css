@@ -30,6 +30,10 @@ div.cs-skin-circular {
 	transition: transform 0.2s ease-out;
 }
 
+@media screen and (max-width: 30em) {
+	.cs-skin-circular > span { width: 80px; height: 80px; }
+}
+
 .cs-skin-circular > span::after {
 	font-family: 'icomoon';
 	content: '\e00f';
@@ -90,6 +94,8 @@ div.cs-skin-circular {
 	opacity: 0;
 	cursor: pointer;
 	pointer-events: auto;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
 	-webkit-transition: -webkit-transform 0.3s, opacity 0.1s;
 	transition: transform 0.3s, opacity 0.1s;
 }

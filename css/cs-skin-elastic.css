@@ -16,6 +16,10 @@ div.cs-skin-elastic {
 	color: #5b8583;
 }
 
+@media screen and (max-width: 30em) {
+	div.cs-skin-elastic { font-size: 1em; }
+}
+
 .cs-skin-elastic > span {
 	background-color: #fff;
 	z-index: 100;
@@ -107,7 +111,7 @@ div.cs-skin-elastic {
 .cs-skin-elastic .cs-options span {
 	background-repeat: no-repeat;
 	background-position: 1.5em 50%;
-	background-size: 40px auto;
+	background-size: 2em auto;
 	padding: 0.8em 1em 0.8em 4em;
 }
 

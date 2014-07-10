@@ -19,7 +19,7 @@ div.cs-skin-rotate {
 }
 
 @media screen and (max-width: 30em) {
-	.cs-skin-rotate { font-size: 1em; }
+	div.cs-skin-rotate { font-size: 1em; width: 200px; }
 }
 
 .cs-skin-rotate > span,
@@ -33,6 +33,14 @@ div.cs-skin-rotate {
 	transform-style: preserve-3d;
 	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
 	transition: transform 0.3s, opacity 0.3s;
+}
+
+@media screen and (max-width: 30em) {
+	.cs-skin-rotate > span,
+	.cs-skin-rotate .cs-options li {
+		-webkit-transform-origin: 50% 50% -100px;
+		transform-origin: 50% 50% -100px;
+	}
 }
 
 .cs-skin-rotate > span {

@@ -223,7 +223,27 @@ label.select-label {
 	text-align: left;
 }
 
+body #cdawrap {
+	top: auto;
+	bottom: 30px;
+	right: 30px;
+}
+
 @media screen and (max-width: 30em) {
+
+	body::before,
+	body::after {
+		display: none !important;
+	}
+
+	body {
+		border: none !important;
+		padding: 0 !important;
+	}
+
+	.codrops-header h1 {
+		font-size: 2em;
+	}
 
 	.codrops-icon span {
 		display: none;
