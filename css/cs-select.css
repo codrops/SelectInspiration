@@ -65,6 +65,10 @@ div.cs-select:focus {
 	transform: translateY(-50%) rotate(180deg);
 }
 
+div.cs-active {
+	z-index: 200;
+}
+
 /* Options */
 .cs-select .cs-options {
 	position: absolute;
