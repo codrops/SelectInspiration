@@ -130,7 +130,7 @@
 				options += '<li class="cs-optgroup"><span>' + el.label + '</span><ul>';
 				[].slice.call( el.children ).forEach( function(opt) {
 					options += createOptionHTML(opt);
-				} )
+				} );
 				options += '</ul></li>';
 			}
 		} );
