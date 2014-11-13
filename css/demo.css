@@ -223,10 +223,8 @@ label.select-label {
 	text-align: left;
 }
 
-body #cdawrap {
-	top: auto;
-	bottom: 30px;
-	right: 30px;
+.wrap {
+	padding: 1em 0;
 }
 
 @media screen and (max-width: 30em) {
