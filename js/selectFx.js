@@ -115,7 +115,17 @@
 				optclass = 'class="' + classes + '" ';
 			}
 
-			return '<li ' + optclass + link + ' data-option data-value="' + el.value + '"><span>' + el.textContent + '</span></li>';
+			var extraAttributes = '';
+
+			[].forEach.call(el.attributes, function(attr) {
+				var name = attr['name'];
+
+				if(name.indexOf('data-') + ['data-option', 'data-value'].indexOf(name) == -1){
+					extraAttributes += name + "='" + attr['value'] + "' ";
+				}
+			} );
+
+			return '<li ' + optclass + link + extraAttributes + ' data-option data-value="' + el.value + '"><span>' + el.textContent + '</span></li>';
 		};
 
 		[].slice.call( this.el.children ).forEach( function(el) {
