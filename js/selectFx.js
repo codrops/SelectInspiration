@@ -66,7 +66,7 @@
 	SelectFx.prototype._init = function() {
 		// check if we are using a placeholder for the native select box
 		// we assume the placeholder is disabled and selected by default
-		var selectedOpt = this.el.querySelector( 'option[selected]' );
+		var selectedOpt = this.el.options[this.el.selectedIndex];
 		this.hasDefaultPlaceholder = selectedOpt && selectedOpt.disabled;
 
 		// get selected option (either the first option with attr selected or just the first option)
