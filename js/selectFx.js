@@ -37,6 +37,23 @@ function factory(classie) {
 		}
 		return a;
 	}
+	
+	/**
+	 * Set the z-index of the currently open select higher than any others on the page.
+	 * WIthout this, if you have multiple copies of a select box, examples further down 
+	 * the page will stay on top of the options of selects further up the page.
+	 */
+	function setZIndexes() {
+		var allSelects = document.querySelectorAll('.cs-select');
+		for (var j = 0; j < allSelects.length; j++) {
+			allSelects[j].style.zIndex = '1';
+		}
+		
+		var openSelect = document.querySelectorAll('.cs-select.cs-active');
+		if (openSelect.length > 0) {
+			openSelect[0].style.zIndex = '99';
+		}
+	}
 
 	/**
 	 * SelectFx function
@@ -269,6 +286,8 @@ function factory(classie) {
 			}
 			classie.add( this.selEl, 'cs-active' );
 		}
+		
+		setZIndexes();
 	};
 
 	/**
