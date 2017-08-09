@@ -92,7 +92,7 @@ function factory(classie) {
 		this.selectedOpt = selectedOpt || this.el.querySelector( 'option' );
 
 		// create structure
-		this._createSelectEl();
+		this._createSelectEl(this);
 
 		// all options
 		this.selOpts = [].slice.call( this.selEl.querySelectorAll( 'li[data-option]' ) );
@@ -113,13 +113,13 @@ function factory(classie) {
 	/**
 	 * creates the structure for the select element
 	 */
-	SelectFx.prototype._createSelectEl = function() {
+	SelectFx.prototype._createSelectEl = function(elem) {
 		var self = this, options = '', createOptionHTML = function(el) {
 			var optclass = '', classes = '', link = '';
 
-			if( el.selectedOpt && !this.foundSelected && !this.hasDefaultPlaceholder ) {
+			if( el.selected ) {
 				classes += 'cs-selected ';
-				this.foundSelected = true;
+				elem.foundSelected = true;
 			}
 			// extra classes
 			if( el.getAttribute( 'data-class' ) ) {
