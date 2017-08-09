@@ -302,33 +302,35 @@ function factory(classie) {
 
 		// current option
 		var opt = this.selOpts[ this.current ];
+		
+		if (this.el.value = opt.getAttribute( 'data-value' )) {
+			// update current selected value
+			this.selPlaceholder.textContent = opt.textContent;
 
-		// update current selected value
-		this.selPlaceholder.textContent = opt.textContent;
+			// change native select element´s value
+			this.el.value = opt.getAttribute( 'data-value' );
 
-		// change native select element´s value
-		this.el.value = opt.getAttribute( 'data-value' );
-
-		// remove class cs-selected from old selected option and add it to current selected option
-		var oldOpt = this.selEl.querySelector( 'li.cs-selected' );
-		if( oldOpt ) {
-			classie.remove( oldOpt, 'cs-selected' );
-		}
-		classie.add( opt, 'cs-selected' );
-
-		// if there´s a link defined
-		if( opt.getAttribute( 'data-link' ) ) {
-			// open in new tab?
-			if( this.options.newTab ) {
-				window.open( opt.getAttribute( 'data-link' ), '_blank' );
+			// remove class cs-selected from old selected option and add it to current selected option
+			var oldOpt = this.selEl.querySelector( 'li.cs-selected' );
+			if( oldOpt ) {
+				classie.remove( oldOpt, 'cs-selected' );
 			}
-			else {
-				window.location = opt.getAttribute( 'data-link' );
-			}
-		}
+			classie.add( opt, 'cs-selected' );
 
-		// callback
-		this.options.onChange( this.el.value );
+			// if there´s a link defined
+			if( opt.getAttribute( 'data-link' ) ) {
+				// open in new tab?
+				if( this.options.newTab ) {
+					window.open( opt.getAttribute( 'data-link' ), '_blank' );
+				}
+				else {
+					window.location = opt.getAttribute( 'data-link' );
+				}
+			}
+
+			// callback
+			this.options.onChange( this.el.value );
+		}
 	};
 
 	/**
