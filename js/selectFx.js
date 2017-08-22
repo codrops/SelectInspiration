@@ -75,7 +75,7 @@ function factory(classie) {
 		// when opening the select element, the default placeholder (if any) is shown
 		stickyPlaceholder : true,
 		// callback when changing the value
-		onChange : function( val ) { return false; }
+		onChange : function( val, el, that ) { return false; }
 	};
 
 	/**
@@ -328,7 +328,7 @@ function factory(classie) {
 		}
 
 		// callback
-		this.options.onChange( this.el.value );
+		this.options.onChange( this.el.value, this.el, this );
 	};
 
 	/**
